@@ -1,0 +1,14 @@
+Dataset: dollar
+Frames avaliados (CLE):    66
+Frames avaliados (Jaccard):66
+
+[Tr-WiSARD1]
+Erro medio (CLE):  2.6915 px
+Jaccard medio:     91.3393 %
+FPS:               17.77
+
+[Tr-WiSARD2]
+Erro medio (CLE):  2.5776 px
+Jaccard medio:     92.0880 %
+FPS:               26.28
+

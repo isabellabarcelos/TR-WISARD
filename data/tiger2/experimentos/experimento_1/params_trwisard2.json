@@ -1,0 +1,12 @@
+{
+    "SEED": 21,
+    "WISARD_ADDRESS_SIZE": 5,
+    "LIMIAR_RETREINO": 0.65,
+    "LIMIAR_NOVO_DISC": 0.4,
+    "QUEUE_MAX_SIZE": 8,
+    "MAX_RETRAINS": 3,
+    "SEARCH_RADIUS": 20,
+    "STEP_SIZE": 3,
+    "REMOVE_BACKGROUND": false,
+    "BACKGROUND_ALPHA": 0
+}

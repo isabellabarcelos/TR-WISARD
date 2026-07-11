@@ -1,0 +1,14 @@
+Dataset: tiger1
+Frames avaliados (CLE):    71
+Frames avaliados (Jaccard):71
+
+[TrWisard1]
+Erro medio (CLE):  9.2662 px
+Jaccard medio:     66.4844 %
+FPS:               109.32
+
+[TrWisard2]
+Erro medio (CLE):  7.3857 px
+Jaccard medio:     70.0094 %
+FPS:               4.30
+

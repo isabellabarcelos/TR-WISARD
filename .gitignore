@@ -1,0 +1,23 @@
+Thumbs.db
+.DS_Store
+
+# notebooks
+.ipynb_checkpoints/
+
+# dados e arquivos grandes
+*.zip
+*.avi
+*.parquet
+*.csv
+
+# checkpoints de tuning
+.tune_*_checkpoint.json
+.tune_checkpoint.json
+
+# logs de execução em background
+nohup_*.out
+
+.vscode
+.claude
+__pycache__/
+.venv/

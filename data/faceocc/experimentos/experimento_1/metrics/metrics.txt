@@ -1,0 +1,14 @@
+Dataset: faceocc
+Frames avaliados (CLE):    178
+Frames avaliados (Jaccard):178
+
+[TrWisard1]
+Erro medio (CLE):  4.7617 px
+Jaccard medio:     91.3275 %
+FPS:               1.62
+
+[TrWisard2]
+Erro medio (CLE):  5.1895 px
+Jaccard medio:     90.3654 %
+FPS:               40.31
+

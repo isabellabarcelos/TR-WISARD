@@ -1,0 +1,14 @@
+Dataset: david
+Frames avaliados (CLE):    93
+Frames avaliados (Jaccard):93
+
+[TrWisard1]
+Erro medio (CLE):  7.9062 px
+Jaccard medio:     80.7316 %
+FPS:               38.54
+
+[TrWisard2]
+Erro medio (CLE):  6.2097 px
+Jaccard medio:     83.7822 %
+FPS:               8.26
+
