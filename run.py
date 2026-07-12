@@ -11,7 +11,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.tr_wisard import TRWisard
 from src.metrics import compute_errors, save_results, create_experiment_folder, get_top_n_experiments
-from src.dataset import load_dataset, preload_frames
+from src.dataset import load_dataset, preload_frames, load_tuned_params
 
 
 def run_single(mode, params, frames, ground_truths, output_root, image_paths):
@@ -123,8 +123,11 @@ def main():
     frames = preload_frames(image_paths)
 
     if args.run == "single":
-        run_single(args.mode, TRWisard.default_params(args.mode),
-                   frames, ground_truths, output_root, image_paths)
+        params = load_tuned_params(args.mode, args.dataset, args.data_root)
+        if params is None:
+            print(f"Nenhum params-{args.mode.replace('_', '-')}.json encontrado para '{args.dataset}', usando DEFAULT_PARAMS genérico")
+            params = TRWisard.default_params(args.mode)
+        run_single(args.mode, params, frames, ground_truths, output_root, image_paths)
     else:
         run_grid(args.mode, frames, ground_truths, output_root, start_from=args.start_from)
 

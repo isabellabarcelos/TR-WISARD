@@ -44,9 +44,10 @@ TR-WISARD/
 │               └── params_*.json  # parâmetros usados
 ├── src/
 │   ├── background.py              # modelo adaptativo de fundo
-│   ├── dataset.py                 # carregamento de dados
+│   ├── dataset.py                 # carregamento de dados e params tunados
 │   ├── metrics.py                 # cálculo e salvamento de métricas
 │   ├── tr_wisard.py               # wrapper unificado
+│   ├── run_isolated.py            # roda um tracker isolado em processo próprio (usado pelo notebook)
 │   └── trackers/
 │       ├── tr_wisard1.py          # Tr-WiSARD 1 (wisardpkg)
 │       └── tr_wisard2.py          # Tr-WiSARD 2 (implementação própria)
@@ -60,13 +61,16 @@ TR-WISARD/
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install setuptools wheel pybind11==2.13.6
+pip install --no-build-isolation -r requirements.txt
 ```
+
+> `wisardpkg` compila uma extensão C++ (via `pybind11`) durante a instalação. O `setup.py` dele importa `pybind11` diretamente, sem declará-lo como dependência de build no `pyproject.toml`, então é preciso instalar `setuptools`, `wheel` e `pybind11` no ambiente *antes* de rodar `pip install -r requirements.txt` com `--no-build-isolation` — caso contrário a instalação falha com `ModuleNotFoundError: No module named 'pybind11'`.
 
 ## Uso
 
 ```bash
-# Executar rastreamento com parâmetros padrão
+# Executar rastreamento com os parâmetros tunados do dataset (modo single)
 python run.py --mode tr_wisard1 --dataset dollar
 python run.py --mode tr_wisard2 --dataset david
 
@@ -74,6 +78,8 @@ python run.py --mode tr_wisard2 --dataset david
 python run.py --mode tr_wisard1 --dataset tiger1 --run single
 python run.py --mode tr_wisard2 --dataset sylv   --run grid
 ```
+
+No modo `single`, os parâmetros usados são carregados automaticamente de `data/{dataset}/params-{mode}.json` (os mesmos valores tunados usados no notebook de exemplos). Se o arquivo não existir para o dataset, cai para os parâmetros genéricos definidos em cada tracker.
 
 ### Parâmetros
 

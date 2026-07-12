@@ -3,12 +3,12 @@ Frames avaliados (CLE):    71
 Frames avaliados (Jaccard):71
 
 [TrWisard1]
-Erro medio (CLE):  9.2662 px
-Jaccard medio:     66.4844 %
-FPS:               109.32
+Erro medio (CLE):  5.9080 px
+Jaccard medio:     72.2508 %
+FPS:               23.21
 
 [TrWisard2]
 Erro medio (CLE):  7.3857 px
 Jaccard medio:     70.0094 %
-FPS:               4.30
+FPS:               7.69
 

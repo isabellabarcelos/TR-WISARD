@@ -55,4 +55,4 @@ tzdata==2025.2
 userpath==1.9.2
 wcwidth==0.2.13
 widgetsnbextension==4.0.14
-wisardpkg @ git+https://github.com/isabellabarcelos/wisardpkg.git@2569c58
+wisardpkg @ git+https://github.com/isabellabarcelos/wisardpkg.git@b6f4e21eb8fe5c33ea2011d6c2545fc03da9ccf1
