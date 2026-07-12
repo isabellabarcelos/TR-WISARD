@@ -14,6 +14,9 @@ Thumbs.db
 .tune_*_checkpoint.json
 .tune_checkpoint.json
 
+# saídas de experimentos geradas localmente (experimento_1 de cada dataset já commitado continua versionado)
+data/*/experimentos/
+data/experimentos/
 
 # logs de execução em background
 nohup_*.out
